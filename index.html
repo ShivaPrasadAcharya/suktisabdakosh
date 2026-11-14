@@ -22,14 +22,15 @@
         </div>
       </div>
       <div class="search-row">
-        <input id="search" type="search" aria-label="Search phrases and meanings" placeholder="खोज्नुहोस् / Search…" autocomplete="off">
+        <input id="search" type="search" aria-label="Search phrases, meanings and explanations" placeholder="खोज्नुहोस् / Search…" autocomplete="off">
         <output id="count" aria-live="polite" aria-atomic="true">Loading…</output>
       </div>
     </div>
   </header>
   <main class="wrap">
     <nav class="quick-links" aria-label="Manage dictionary">
-      <a data-edit target="_blank" rel="noopener noreferrer">Edit phrases.json ↗</a>
+      <label class="file-picker" hidden>Text file <select data-file-select aria-label="Text file to edit"></select></label>
+      <a data-edit target="_blank" rel="noopener noreferrer">Edit .txt ↗</a>
       <a id="upload" target="_blank" rel="noopener noreferrer">Add .txt ↗</a>
       <a data-repo target="_blank" rel="noopener noreferrer">Repository ↗</a>
     </nav>
@@ -52,7 +53,7 @@
           <select id="language"><option value="all">All</option><option value="en">English</option><option value="ne">Nepali</option></select>
         </label>
       </div>
-      <p class="hint">नेपाली सामान्यीकृत, खाली ठाउँ बेवास्ता गर्ने खोज सक्रिय छ।</p>
+      <label class="normalize-option"><input id="normalized" type="checkbox" checked> नेपाली सामान्यीकृत खोज / Nepali normalized search</label>
       <details><summary>Letters</summary><div id="letters" aria-label="Starting letter"></div></details>
       <details>
         <summary>Display Settings</summary>
@@ -63,7 +64,7 @@
         </div>
       </details>
       <nav class="quick-links" aria-label="Repository tools">
-        <a class="button" data-edit target="_blank" rel="noopener noreferrer">Edit Phrases ↗</a>
+        <a class="button" data-edit target="_blank" rel="noopener noreferrer">Edit .txt ↗</a>
         <a class="button" data-repo target="_blank" rel="noopener noreferrer">Repository ↗</a>
       </nav>
     </section>
