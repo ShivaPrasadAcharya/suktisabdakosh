@@ -38,7 +38,7 @@ jobs:
       - name: Prepare website
         run: |
           mkdir -p _site
-          cp index.html style.css script.js phrases.json text-files.json _site/
+          cp index.html style.css script.js phrases.json text-files.json favicon.svg _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
