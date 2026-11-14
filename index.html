@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ne">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple English and Nepali phrase dictionary.">
+  <title>सूक्तिशब्दकोश | Suktisabdakosh</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to phrases</a>
+  <header>
+    <div class="wrap">
+      <div class="top-row">
+        <h1>सूक्तिशब्दकोश<span> | Suktisabdakosh</span></h1>
+        <div class="tools" aria-label="Text size">
+          <button id="smaller" aria-label="Decrease text size">A−</button>
+          <button id="reset" aria-label="Reset text size">A</button>
+          <button id="larger" aria-label="Increase text size">A+</button>
+          <button id="menuButton" aria-expanded="false" aria-controls="menu">Menu</button>
+        </div>
+      </div>
+      <div class="search-row">
+        <input id="search" type="search" aria-label="Search phrases and meanings" placeholder="खोज्नुहोस् / Search…" autocomplete="off">
+        <output id="count" aria-live="polite" aria-atomic="true">Loading…</output>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav class="quick-links" aria-label="Manage dictionary">
+      <a data-edit target="_blank" rel="noopener noreferrer">Edit phrases.json ↗</a>
+      <a id="upload" target="_blank" rel="noopener noreferrer">Add .txt ↗</a>
+      <a data-repo target="_blank" rel="noopener noreferrer">Repository ↗</a>
+    </nav>
+    <section id="menu" aria-label="Dictionary settings" hidden>
+      <div class="settings-row">
+        <label>Search Filter
+          <select id="filter">
+            <option value="contains">Contains whole entry</option>
+            <option value="any">Contains any word</option>
+            <option value="all">Contains all words</option>
+            <option value="begins">Begins with</option>
+            <option value="ends">Ends with</option>
+            <option value="letter">Starts with letter</option>
+            <option value="word">Has a word starting with</option>
+            <option value="not">Does not contain</option>
+            <option value="exact">Exact match</option>
+          </select>
+        </label>
+        <label>Language
+          <select id="language"><option value="all">All</option><option value="en">English</option><option value="ne">Nepali</option></select>
+        </label>
+      </div>
+      <p class="hint">नेपाली सामान्यीकृत, खाली ठाउँ बेवास्ता गर्ने खोज सक्रिय छ।</p>
+      <details><summary>Letters</summary><div id="letters" aria-label="Starting letter"></div></details>
+      <details>
+        <summary>Display Settings</summary>
+        <div class="settings-row">
+          <label>Columns<select id="columns"><option value="2">2</option><option value="1">1</option></select></label>
+          <label>Sort order<select id="sort"><option value="asc">A→Z</option><option value="desc">Z→A</option></select></label>
+          <label>Theme<select id="theme"><option value="light">Light</option><option value="dark">Dark</option></select></label>
+        </div>
+      </details>
+      <nav class="quick-links" aria-label="Repository tools">
+        <a class="button" data-edit target="_blank" rel="noopener noreferrer">Edit Phrases ↗</a>
+        <a class="button" data-repo target="_blank" rel="noopener noreferrer">Repository ↗</a>
+      </nav>
+    </section>
+    <p id="status" role="status">Loading phrases…</p>
+    <dl id="results" tabindex="-1" aria-label="Phrases and meanings"></dl>
+    <noscript>Please enable JavaScript to load the dictionary.</noscript>
+  </main>
+  <nav class="floating" aria-label="Page navigation">
+    <button id="top" aria-label="Go to top">↑</button>
+    <button id="bottom" aria-label="Go to bottom">↓</button>
+  </nav>
+</body>
+</html>
