@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Suktisabdakosh — open dictionary</title>
+  <rect width="64" height="64" rx="14" fill="#17684e"/>
+  <path d="M10 16c8-2 15 0 22 5 7-5 14-7 22-5v32c-8-2-15 0-22 5-7-5-14-7-22-5Z" fill="#fffaf0"/>
+  <path d="M32 21v32" fill="none" stroke="#d2b36b" stroke-width="3"/>
+  <path d="M17 25l8 3m-8 6 8 3m14-9 8-3m-8 12 8-3" fill="none" stroke="#17684e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 13v11l4-3 4 1V13" fill="#e7bb56"/>
+</svg>
